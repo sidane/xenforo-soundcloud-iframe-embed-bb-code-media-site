@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="sidaneSoundCloudIframe" title="SoundCloud iFrame Embed BB Code Media Site" version_string="1.0" version_id="1" url="" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners/>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups/>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases/>
+  <route_prefixes/>
+  <style_properties/>
+  <templates/>
+  <public_template_modifications/>
+  <bb_code_media_sites>
+    <site media_site_id="soundcloudembed" site_title="SoundCloud" site_url="http://soundcloud.com/" match_is_regex="1" match_callback_class="" match_callback_method="" embed_html_callback_class="" embed_html_callback_method="" supported="1">
+      <match_urls><![CDATA[#(?P<id>soundcloud\.com/(([a-z0-9-_]+/[a-z0-9-_]+/[a-z0-9-_]+)|([a-z0-9-_]+/[a-z0-9-_]+))(/[a-z0-9-]+)?)#si
+#(?P<id>snd\.sc/[a-z0-9]+)#si]]></match_urls>
+      <embed_html><![CDATA[<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url={$id}&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>]]></embed_html>
+    </site>
+  </bb_code_media_sites>
+</addon>
